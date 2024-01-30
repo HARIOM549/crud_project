@@ -1,0 +1,113 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+{% load static %}
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url('{% static 'image/app1/login4.jpg' %}');
+        /* background-repeat:no-repeat; */
+        /* background-position-x:center; */
+        /* background-color: pink; */
+    
+    }
+    .Contact{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        
+
+    }
+    .track{
+        color: red;
+        padding: 30px;
+        height: 200px;
+        padding:40px ;
+        /* background-color: #9ee2f782; */
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px pink; 
+        
+    }
+    .track h5{
+        border-bottom: 0.5px solid;
+    }
+    .track button{
+        padding: 17px;
+        border-radius: 10px;
+        /* border: 2px solid rgb(255, 149, 0); */
+        background-color:#0d6efd;
+        margin-top: 20px;
+        color: #fff;
+        
+    }
+    .help{
+        /* border: 1px solid black ; */
+        
+        height: 435px;
+        padding:40px ;
+        /* background-color: #9ee2f782; */
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px pink;
+
+    }
+    .help h2{
+        color: red;
+        font-size: 40px;
+        border-bottom: 0.5px solid;
+
+    }
+    .hellp p{
+        color: white;
+    }
+    .SELECT h4{
+        color: white;
+    }
+    .sell h6 a{
+        margin: 22px;
+        color: white;
+        font-size: 17px;
+    }
+    
+   
+
+</style>
+
+<body>
+    <br><br><br>
+    <div class="Contact">
+        
+        <div class="help">
+            
+            <div class="hellp"> <h2>HELP CENTER</h2>
+            <p>We are here to help you</p></div>
+            <div class="SELECT">
+                <h4>SELECT QUERY TYPE</h4>
+
+                    <div class="sell">
+                        <br>
+                        <h6> <a href="#">Select Query Type</a>       </h6>
+                        <br>
+                        <h6> <a href=""> Order Related Queries</a>   </h6>
+                        <br>
+                        <h6> <a href=""> Non-order Related Issues</a></h6>
+                        <br>
+                        <h6> <a href=""> Recent Issues </a></h6>
+                    </div>
+            </div>
+        </div>
+        
+        
+        <div class="track">
+                <h5>TRACK, CANCEL, RETURN/EXCHANGE</h5>
+                <br>
+                <button >TRACK ORDER</button>
+        
+        </div>
+
+    </div>
+    
+</body>
+
+{% endblock%}

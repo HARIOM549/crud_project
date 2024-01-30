@@ -1,0 +1,107 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    
+<style>
+body{
+ 
+    background-image: url('{% static 'image/app1/login4.jpg' %}') ;
+}
+.signup_box h1{
+    color: white;
+   
+}
+.signup_box{
+
+        padding:40px ;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px pink;
+}
+.login-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.uery{
+    border-radius: 2px;
+    width: 400px;
+    height: 80px;
+    font-size: 20px;
+}
+.num{
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+}
+.mail{
+    width: 211px;
+    height: 40px;
+}
+.sub{
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 23px;
+}
+
+
+</style>
+
+
+</head>
+
+<body >
+    
+    <center>
+        <br>
+        <br><br><br>
+    <div class="content_box">
+        <div class="signup_box">
+            <form action="{% url 'query' %}" method="post">
+                {% csrf_token %}
+
+                <h1>---- Dash Board ----</h1>
+                <p style="color: red;">{{ data1 }}</p>
+                <hr>
+                
+                <div>
+                    <input type="email" class="mail" name="email" required placeholder="Enter Email" value={{email}} >
+                </div>
+                <br>
+
+                
+                <div>
+                    <input type="text" class="num" name="number" required placeholder="Enter Phone no.">
+                </div>
+                <br>
+               
+                <div>
+                
+                    <input type="text" class="uery" name="Query" required placeholder="Enter your Query">
+                
+                </div>
+                
+                
+                <p style="color: red;">{{msg}}</p>
+
+
+                <div class="submit">
+                    <input type="submit" value="Query" class="sub">
+<br><br>
+                  <h5>  <a href="{% url 'showdata' pk=email %}" style="color: white;">Showdate</a> </h5>
+                    
+                    
+                </div>
+            </form>
+        
+        </div>
+    </div>
+
+</center>
+
+
+{% endblock %}

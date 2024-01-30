@@ -1,0 +1,53 @@
+
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="">
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        /* background-color: pink;  */
+        background-image: url('{% static 'image/app1/login4.jpg' %}');
+        
+    }
+    .about{
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .about_cont h2{
+        color: white;
+      
+
+    }
+    .about_cont p{
+        color:  white;
+
+    }
+    
+</style>
+
+<body>
+
+    
+    <div class="about">
+        <div class="about_img">
+            <img src="{% static 'image/app1/about-img.png' %}" alt="">
+
+        </div>
+        <div class="about_cont">
+            <h2>ABOUT US</h2><hr>
+            <p>Fashion is most often thought of a global industry that is invested 
+                in anticipating what we wear and how we wish to appear to others. But 
+                fashion isn't 
+                just a business. It's also a cultural and social phenomenon, driven by the desire for the new.
+                As such, the industry can never fully control fashion: fashion is all about being open to change.
+            </p>
+
+        </div>
+    </div>
+    
+</body>
+{% endblock%}

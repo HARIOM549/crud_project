@@ -1,0 +1,364 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+
+                <link rel="stylesheet" href="{% static 'css/app1/home.css' %}"> 
+                
+
+        <title></title>
+        <style>
+                .carousel-inner img {
+                        height: 670px;
+                }
+
+                .carousel-caption {
+                        color: black;
+                        text-transform: capitalize;
+                }
+
+                .intro {
+                        position: absolute;
+                        top: 70px;
+                        left: 200px;
+                        height: 400px;
+                        width: 400px;
+                        padding: 20px;
+                }
+
+                .intro p {
+                        font-family: cursive;
+                        text-transform: capitalize;
+                        /* text-align: center; */
+                        text-align: right;
+                        color: #c58f08;
+                        font-size: 50px;
+                }
+
+                .carousel-indicators [data-bs-target] {
+                        box-sizing: content-box;
+                        flex: 0 1 auto;
+                        width: 30px;
+                        height: 3px;
+                        padding: 0;
+                        margin-right: 3px;
+                        margin-left: 3px;
+                        text-indent: -999px;
+                        cursor: pointer;
+                        background-color: #ff0000;
+                        background-clip: padding-box;
+                        border: 0;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        opacity: .5;
+                        transition: opacity .6s ease;
+                }
+
+                footer {
+                        position: relative;
+                        top: 20px;
+                        background-color: rgba(96, 81, 7, 0.753);
+
+                        width: 100%;
+                        padding-top: 50px;
+                        padding-bottom: 60px;
+                }
+
+                .footer_cont {
+                        text-align: center;
+                        color: #fff;
+                        display: flex;
+                        justify-content: space-evenly;
+                }
+
+                footer img {
+                        width: 45px;
+                }
+
+                .footer_link {
+                        color: #fff;
+                        margin-top: 40px;
+                        display: flex;
+                        justify-content: space-around;
+                }
+
+                .social_media img {
+                        margin-left: 21px;
+                        justify-content: center;
+                        height: 28px;
+                        width: 28px;
+                }
+
+                .link a {
+                        color: black;
+                        margin-left: 35px;
+                }
+                .link_hp a {
+                        margin-left: 40px;    
+                        color: black;
+                }
+                .foot h1{
+                      color: red;
+                      top: 20px;
+                      size: 50px;
+                      padding-top: 80px;
+                        /* padding-bottom: 60px; */
+                }
+              
+                
+        </style>
+
+
+
+</head>
+
+<body>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                        <div class="carousel-item active">
+                                
+                                <img src="{% static 'image/app1/fashion1.png' %}" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block" style="color: black;">
+                                        <h5>we provide the best furniture</h5>
+                                        <p></p>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                                <img src="{% static 'image/app1/fashion2.png' %}" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block" style="color: black;">
+                                        <h5>Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                                <img src="{% static 'image/app1/fashion3.png' %}" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block" style="color: black;">
+                                        <h5>Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                        </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                </button>
+        </div>
+
+
+<!-- --------------------------------------------------------------------------------------------------------- -->
+
+<br><br><br>
+
+<section class="section new-arrival">
+        <div class="title">
+          <h1>---- NEW ARRIVALS ----</h1>
+          <p>All the latest picked from designer of our store</p>
+        </div>
+  
+        <div class="product-center">
+          <div class="product-item">
+            <div class="overlay">
+              <a href="productDetails.html" class="product-thumb">
+                <img src="{% static 'image/app1/product-1.jpg' %}" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="productDetails.html">Quis Nostrud Exercitation</a>
+              <h4>$700</h4>
+            </div>
+            <!-- <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul> -->
+          </div>
+
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="{% static 'image/app1/product-3.jpg' %}" alt="" />
+              </a>
+              <span class="discount">50%</span>
+            </div>
+  
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="">Sonata White Men’s Shirt</a>
+              <h4>$800</h4>
+            </div>
+            <!-- <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul> -->
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="{% static 'image/app1/product-2.jpg' %}" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="">Concepts Solid Pink Men’s Polo</a>
+              <h4>$150</h4>
+            </div>
+            <!-- <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul> -->
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="{% static 'image/app1/product-4.jpg' %}" alt="" />
+              </a>
+              <span class="discount">50%</span>
+            </div>
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="">Edor do eiusmod tempor</a>
+              <h4>$900</h4>
+            </div>
+            <!-- <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul> -->
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="{% static 'image/app1/product-5.jpg' %}" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="">Edor do eiusmod tempor</a>
+              <h4>$100</h4>
+            </div>
+            <!-- <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul> -->
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="{% static 'image/app1/product-6.jpg' %}" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="">Edor do eiusmod tempor</a>
+              <h4>$500</h4>
+            </div>
+            <!-- <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul> -->
+          </div>
+
+
+        </div>
+  
+      </section>
+
+
+      
+
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+<center>
+<div class="foot">
+<h1>---- Footer ----</h1>
+</div>
+</center>
+
+        <footer>
+             
+                <div class="footer_cont">
+                        <div><img src="{% static 'image/app1/telephone.png' %}" alt="#">
+                                <p>+91 6263131125</p>
+                        </div>
+                        <div><img src="{% static 'image/app1/email.png' %}" alt="#">
+                                <p>patelhariom761@gmail.com</p>
+                        </div>
+                        <div><img src="{% static 'image/app1/placeholder.png' %}" alt="#">
+                                <p>Bhopal MP</p>
+                        </div>
+                </div>
+
+                <div class="footer_link">
+                        <div class="link">
+                                <h3>QUICK LINKS</h3>
+                                <h6> <a href="{% url 'home' %}">Home</a> </h6>
+                                <h6> <a href="{% url 'about' %}">About</a> </h6>
+                                <h6> <a href="{% url 'Contact' %}">Contact</a> </h6>
+                                <h6> <a href="{% url 'Signup' %}">Register</a> </h6>
+                                <h6> <a href="{% url 'Login' %}">Login</a> </h6>
+                        
+                        </div>
+
+                        <div class="link_hp">
+                                <h2>Help & Support </h2>
+                                <h6> <a href="#">Privacy policy </a> </h6>
+                                <h6> <a href="#">Term & conditions</a> </h6>
+                                <h6> <a href="#">Technical support</a> </h6>
+                                <h6> <a href="#">Customer care</a></h6>
+        
+                        </div>
+
+
+                        <div class="social_media">
+
+                                <h2>Information</h2>
+
+                                <a href="#"> <img src="{% static 'image/app1/facebook.png' %}" alt=""> </a>
+                            
+                                <a href="#"> <img src="{% static 'image/app1/instagram.png' %}" alt=""></a>
+                               
+                                <a href="#"> <img src="{% static 'image/app1/linkedin.png' %}" alt=""> </a>
+                              
+                        </div>
+                </div>
+              
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+</body>
+</html>
+
+{% endblock%}

@@ -1,0 +1,64 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+{% load static %}
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/app1/login_style.css' %}"> 
+     
+    <!-- <style>
+.login{
+    background-color: pink;
+}
+    </style> -->
+</head>
+
+<body >
+    <center>
+    <div class="login">
+      <img src="{% static 'image/app1/login4.jpg' %}" alt="login-image" class="login-image">
+
+        <form class="login-form" method="post" action="{% url 'Logindata' %}">
+            {% csrf_token %}
+
+<!-- <br><br><br><br><br> -->
+
+            <p >{{data1}}</p>            
+
+            <h1 class="login-title">Login</h1>
+   
+            <br>
+
+            <div class="login-content">
+                <div class="login-box">
+                    <i class="ri-user-3-line login-icon"></i>
+                    <div class="login-box-input">
+
+                        <input type="email" class="login-input" id="login-email" name="email" placeholder="Enter your email">
+                        
+                    </div>
+                </div>
+
+                <div class="login-box">
+                    <i class="ri-lock-2-line login-icon"></i>
+                    <div class="login-box-input">
+
+                    <input type="password" class="login-input" id="login-pass" name="password" placeholder="Enter your password" >
+                    
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="submit" class="login-button">Login</button>
+        
+            <p class="login-register">
+
+                Don't have an account? <a href="{% url 'Signup' %}">Register</a>
+            </p>
+        </form>
+    </div>
+
+    
+</center>
+{% endblock%}
